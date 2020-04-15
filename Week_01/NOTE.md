@@ -19,3 +19,17 @@
 
 ### 4/13
 - go: append
+
+### 4/15
+- C#: Array.Reverse(array)
+- C#: Array.Reverse(array, index, length)
+- C#/Java:
+  ```
+    public static void swap(int[] arr, int a , int b)
+    {
+        arr[a] = arr[a] ^ arr[b];
+        arr[b] = arr[a] ^ arr[b];
+        arr[a] = arr[a] ^ arr[b]
+    } 
+    //使用异或置换，以后再也不用tmp
+  ```
