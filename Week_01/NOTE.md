@@ -37,3 +37,13 @@
 > - slice的默认开始位置是0，ar[:n]等价于ar[0:n]
 > - slice的第二个序列默认是数组的长度，ar[n:]等价于ar[n:len(ar)]
 > - 如果从一个数组里面直接获取slice，可以这样ar[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于ar[0:len(ar)]
+### 4/16
+超哥分享
+>- raw productivity
+>- proactive
+>- prioritize tasks - impact / urgency
+>- consumer -> producer
+>- empathy
+>- https://zhuanlan.zhihu.com/prattle
+
+- java/c#: 字符串转int：50'2'-'0'
