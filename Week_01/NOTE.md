@@ -47,3 +47,7 @@
 >- https://zhuanlan.zhihu.com/prattle
 
 - java/c#: 字符串转int：50'2'-'0'
+
+### 4/17
+- python: for and if后面需要加:
+- python: for i in range(1, len(nums))
