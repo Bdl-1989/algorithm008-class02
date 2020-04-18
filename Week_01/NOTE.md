@@ -1,4 +1,8 @@
 学习笔记
+## Need practice
+- 21
+
+
 ## 数组、链表、跳表的基本实现和特性
 ### Array
 - 时间复杂度：insert和delete都是O(n)，其余都是O(1)
