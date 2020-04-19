@@ -1,7 +1,13 @@
 学习笔记
 ## Need practice
-- 21
+- 21, 42, interview50
 
+## 分析Queue和Priority Queue的源码
+- c#没有priority queue和deque，目前还不知道有什么可以替代？
+- 对于java，就稍稍分析下：
+- queue 是一个接口，有以下方法：add(),peek(),element(),remove(),poll(),size()
+- priority queue继承了AbstractQueue,而AbstractQueue实现了Queue；有六个构造函数，以及有以下方法：add(E),remove(),poll(),peek(),iterator(),contians(o),clear(),offer(E),size(),toArray(),comparator()
+- 其中Comparator方法，能够比较element的优先级
 
 ## 数组、链表、跳表的基本实现和特性
 ### Array
@@ -20,6 +26,24 @@
 - 有序的
 - 升维/空间换时间
 - redis
+
+## 栈和队列的实现与特性
+- 多看源码
+- python source code: https://docs.python.org/2/library/heapq.html
+- java source code: https://docs.oracle.com/javase/10/docs/api/java/util/PriorityQueue.html
+### stack
+- 后进先出
+- 添加/删除都是O(1)
+### queue
+- 先进先出
+- 添加/删除都是O(1)
+### deque (double end)
+- 含stack和queue的特性
+
+### priority queue
+- 插入O(1)
+- 取出O(logN)
+- 底层具体实现的数据结构较为多样和复杂：heap, bst, treap
 
 ### 4/13
 - go: append
@@ -55,3 +79,9 @@
 ### 4/17
 - python: for and if后面需要加:
 - python: for i in range(1, len(nums))
+
+### 4/19
+- java/c#: HashMap;HashTable, 一个是单链表，一个是dictionary
+- string: IndexOf and LastIndexOf!!! ref-interview50
+
+
