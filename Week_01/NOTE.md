@@ -51,7 +51,7 @@
 ### 4/15
 - C#: Array.Reverse(array)
 - C#: Array.Reverse(array, index, length)
-- C#/Java:
+- C#/Java: 位运算符效率高
   ```
     public static void swap(int[] arr, int a , int b)
     {
@@ -81,7 +81,7 @@
 - python: for i in range(1, len(nums))
 
 ### 4/19
-- java/c#: HashMap;HashTable, 一个是单链表，一个是dictionary
+
 - string: IndexOf and LastIndexOf!!! ref-interview50
 
 
