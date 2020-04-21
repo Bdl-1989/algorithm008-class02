@@ -1,5 +1,5 @@
 //https://leetcode-cn.com/problems/bulls-and-cows/
-
+//practice day: 4/20, 4/21
 
 public class Solution {
     public string GetHint(string secret, string guess) {

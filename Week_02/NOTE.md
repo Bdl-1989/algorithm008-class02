@@ -1,4 +1,9 @@
 学习笔记
+
+## Need to practice
+- 17.09
+
+
 ## 哈希表/映射/集合
 ### 哈希表
 - 也叫散列表，是根据key值而直接进行访问的数据结构。具体通过将key映射到表中的位置来访问记录。映射函数叫做散列函数(hash function)，存放记录的数组叫哈希表。
@@ -36,3 +41,8 @@ c#没有hashmap
 ## 4/20
 - C#: Hashtable
 - C#: str.Split(",",StringSplitOptions.RemoveEmptyEntries);
+
+
+## 4/21
+- 切题四件套：1.clarification; 2.possible solution --> optimal (space & time); 3.code; 4.test cases
+- 
