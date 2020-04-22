@@ -45,4 +45,23 @@ c#没有hashmap
 
 ## 4/21
 - 切题四件套：1.clarification; 2.possible solution --> optimal (space & time); 3.code; 4.test cases
-- 
+
+## 树/二叉树/二叉搜索树
+- 树和图的差别
+- 决策树
+- 二叉树遍历
+  1. 前序（Pre-order）:根-左-右
+  2. 中序（In-order）：左-根-右
+  3. 后序（Post-order）：左-右-根
+- 二叉搜索树 binary search tree，也称二叉排序树、有序二叉树 ordered binary tree、排序二叉树 Sorted binary tree，是指一颗空树或者具有下列性质的二叉树：
+  1. 左子树上所有结点的值均小于它的根结点的值；
+  2. 右子树上所有结点的值均大于它的根结点的值；
+  3. 以此类推：左、右子树也分别为二叉查找树。（这是重复性）
+  4. 中序遍历；升序排列
+- 二叉搜索树常见操作：O(logN)
+  1. 查询；
+  2. 插入新结点（创建）；
+  3. 删除；
+
+- 思考：为什么树的面试题解法一般都是递归？
+- Demo：https://visualgo.net/zh/bst?slide=1

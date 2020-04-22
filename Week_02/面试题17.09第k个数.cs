@@ -1,5 +1,5 @@
 //https://leetcode-cn.com/problems/get-kth-magic-number-lcci/
-
+//practice day: 4-21；4-22
 //1. stack
 //2. 丑数？
 
