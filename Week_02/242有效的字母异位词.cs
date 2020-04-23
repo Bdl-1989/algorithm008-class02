@@ -2,7 +2,7 @@
 //2. hash, map -->统计每个字符的频次
 
 // https://leetcode-cn.com/problems/valid-anagram/description/
-//practice day: 4-21；4-22
+//practice day: 4-21；4-22, 4-23
 public class Solution {
     public bool IsAnagram(string s, string t) {
         if (s.Length != t.Length) return false;

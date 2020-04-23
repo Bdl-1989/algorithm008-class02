@@ -51,8 +51,30 @@ c#没有hashmap
 - 决策树
 - 二叉树遍历
   1. 前序（Pre-order）:根-左-右
+```
+def preorder(self, root):
+  if root:
+    self.traverse_path.append(root.val)
+    self.preorder(root.left)
+    self.preorder(root.right)
+```
   2. 中序（In-order）：左-根-右
+```
+def inorder(self, root):
+  if root:
+    self.inorder(root.left)
+    self.traverse_path.append(root.val)
+    self.inorder(root.right)
+```
   3. 后序（Post-order）：左-右-根
+```
+def postorder(self, root):
+  if root:
+    self.postorder(root.left)
+    self.postorder(root.right)
+    self.traverse_path.append(root.val)
+```
+
 - 二叉搜索树 binary search tree，也称二叉排序树、有序二叉树 ordered binary tree、排序二叉树 Sorted binary tree，是指一颗空树或者具有下列性质的二叉树：
   1. 左子树上所有结点的值均小于它的根结点的值；
   2. 右子树上所有结点的值均大于它的根结点的值；
@@ -65,3 +87,6 @@ c#没有hashmap
 
 - 思考：为什么树的面试题解法一般都是递归？
 - Demo：https://visualgo.net/zh/bst?slide=1
+
+- 树的解法一般是递归
+  1. 容易调遍历函数

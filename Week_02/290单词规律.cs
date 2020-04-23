@@ -1,5 +1,5 @@
 //https://leetcode-cn.com/problems/word-pattern/
-//practice day: 4/20, 4/21，4/22
+//practice day: 4/20, 4/21，4/22, 4/23
     public class Solution
     {
         public bool WordPattern(string pattern, string str)

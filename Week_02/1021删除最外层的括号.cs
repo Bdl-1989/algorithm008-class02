@@ -2,7 +2,7 @@
 
 //stack
 
-//practice day: 4/22
+//practice day: 4/22, 4/23
 
 
 public class Solution {
