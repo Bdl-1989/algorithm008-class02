@@ -143,3 +143,7 @@ def postorder(self, root):
 
 ## 4/25
 - C#: 交叉数组new int[][]，赋值方式；二维数组new int[,]，赋值方式
+
+
+## 图
+- 用到越来越少
