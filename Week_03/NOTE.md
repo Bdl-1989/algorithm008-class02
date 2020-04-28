@@ -38,3 +38,7 @@ public void recur(int level, int param){
 - 不要人肉进行递归 （最大误区）
 - 找到最近最简方法，将其拆解成可重复解决的问题（重复子问题）
 - 数学归纳法思维，证明n成立，n+1也成立
+
+
+## 4/28
+C#, StringBuilder
