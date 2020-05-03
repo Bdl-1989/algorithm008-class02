@@ -42,3 +42,33 @@ public void recur(int level, int param){
 
 ## 4/28
 C#, StringBuilder
+
+## 分治、回溯
+### 分治
+- 多个子问题的递归
+
+```
+def divide_conquer(problem, param1, param2, ...): 
+  # recursion terminator 
+  if problem is None: 
+	print_result 
+	return 
+
+  # prepare data 
+  data = prepare_data(problem) 
+  subproblems = split_problem(problem, data) 
+
+  # conquer subproblems 
+  subresult1 = self.divide_conquer(subproblems[0], p1, ...) 
+  subresult2 = self.divide_conquer(subproblems[1], p1, ...) 
+  subresult3 = self.divide_conquer(subproblems[2], p1, ...) 
+  …
+
+  # process and generate the final result 
+  result = process_result(subresult1, subresult2, subresult3, …)
+	
+  # revert the current level states
+```
+
+### 回溯
+- 采用试错的思想，它尝试分步地去解决一个问题
