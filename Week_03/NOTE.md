@@ -72,3 +72,8 @@ def divide_conquer(problem, param1, param2, ...):
 
 ### 回溯
 - 采用试错的思想，它尝试分步地去解决一个问题
+
+
+
+## 牛顿迭代法
+
