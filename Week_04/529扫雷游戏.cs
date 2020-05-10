@@ -1,5 +1,6 @@
 //https://leetcode-cn.com/problems/minesweeper/submissions/
 
+//practice day: 5-10
 
 public class Solution {
     public char[][] UpdateBoard(char[][] board, int[] click) {
@@ -34,5 +35,57 @@ public class Solution {
             dfs(board, i - 1 , j - 1);
             dfs(board, i - 1 , j + 1);
         }
+    }
+}
+
+
+
+///BFS
+public class Solution {
+    public char[][] UpdateBoard(char[][] board, int[] click) {
+        int m = board.Length;
+        int n = board[0].Length;
+
+        Queue q = new Queue();
+        q.Enqueue(click);
+        while (q.Count != 0){
+            int[] cell = (int[])q.Dequeue();
+            int row = cell[0];
+            int col = cell[1];
+
+            if (board[row][col] == 'M'){
+                board[row][col] = 'X';
+                break;
+            }else{
+                int count = 0;
+                for (int i = -1; i < 2; ++i){
+                    for (int j = -1; j < 2; ++j){
+                        if (i == 0 && j == 0) continue;
+                        int r = row + i;
+                        int c = col + j;
+                        if (r < 0 || c < 0 || r >= m || c >= n) continue;
+                        if (board[r][c] == 'M' || board[r][c] == 'X') count++;
+                    }
+                }
+                if (count > 0){
+                    board[row][col] = (char)(count + '0');
+                }else{
+                    board[row][col] = 'B';
+                    for (int i = -1; i < 2; ++i){
+                        for (int j = -1; j < 2; ++j){
+                            if (i == 0 && j == 0) continue;
+                            int r = row + i;
+                            int c = col + j;
+                            if (r < 0 || c < 0 || r >= m || c >= n) continue;
+                            if (board[r][c] == 'E'){
+                                q.Enqueue(new int[]{r, c});
+                                board[r][c] = 'B';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return board;
     }
 }
