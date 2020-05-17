@@ -93,4 +93,57 @@ def BFS(graph, start, end):
 
 - 贪心可以解决一些最优化问题， 如求图中的最小生成树， 求哈夫曼编码等。然而对于工程和生活中的问题，贪心法一般不能得到我们所要的结果。
 - 贪心可以作为辅助算法或者求解一些要求结果不特别精确的问题
-- 
+
+
+
+## 二分查找
+- 目标函数单调性
+- 存在上下界
+- 能够通过索引访问
+
+- 代码模板
+```
+left, right = 0, len(array) - 1 
+while left <= right: 
+	  mid = (left + right) / 2 
+	  if array[mid] == target: 
+		    # find the target!! 
+		    break or return result 
+	  elif array[mid] < target: 
+		    left = mid + 1 
+	  else: 
+		    right = mid - 1
+
+```
+
+
+
+## 作业
+- 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
+说明：同学们可以将自己的思路、代码写在第 4 周的学习总结中
+
+```
+public class Solution {
+    public int FindMin(int[] nums) {
+        int left = 0;
+        int right = nums.Length - 1;
+        while (left < right){
+            int mid = (left + right) / 2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            }else right = mid;
+        }
+        return left;
+    }
+}
+```
+
+
+- 用二分法查找，需要始终将目标值（这里是最小值）套住，并不断收缩左边界或右边界。左、中、右三个位置的值相比较，有以下几种情况：
+1. 左值 < 中值, 中值 < 右值 ：没有旋转，最小值在最左边，可以收缩右边界
+ 
+2. 左值 > 中值, 中值 < 右值 ：有旋转，最小值在左半边，可以收缩右边界
+ 
+3. 左值 < 中值, 中值 > 右值 ：有旋转，最小值在右半边，可以收缩左边界
+
+ 
