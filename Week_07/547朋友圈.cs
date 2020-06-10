@@ -39,11 +39,14 @@ public class Solution {
     public class UnionFind{
         public int count;
         private int[] parent;
+        private int[] size;
         public UnionFind(int n){
             count = n;
             parent = new int[n];
+            size = new int[n];
             for (int i = 0; i < n; ++i){
                 parent[i] = i;
+                size[i] = 1;
             }
         }
         public int Find (int p){
@@ -57,7 +60,15 @@ public class Solution {
             int rootP = Find(p);
             int rootQ = Find(q);
             if (rootP == rootQ) return;
-            parent[rootP] = rootQ;
+            //小树接大树
+            if (size[rootP] > size[rootQ]){
+                parent[rootQ] = rootP;
+                size[rootQ] += size[rootP];
+            }else{
+                parent[rootP] = rootQ;
+                size[rootP] += size[rootQ];
+            }
+            
             count--;
         }
     }
