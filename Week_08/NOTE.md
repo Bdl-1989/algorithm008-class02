@@ -1,10 +1,9 @@
 学习笔记
-
+- 树状数组
 
 ## 位运算
 
-- 背。。。
-- N皇后
+
 
 ## 布隆过滤器 Bloom filter
 - 应用：比特币网络/分布式系统/Redis缓存/垃圾邮件、评论过滤等
@@ -149,3 +148,81 @@ class LRUCache {
     }
 }
 ```
+
+
+## 排序
+- 高级
+### 快速排序
+- 数组取标杆pivot，将小元素放pivot左边，大元素放右侧，然后依次对右边和左边的子数组继续快排；以达到整个序列有序。
+
+
+### 归并排序
+- 把长度为n的输入序列分为两个长度为n/2的子序列
+- 对者两个子序列分别采用归并排序
+- 将两个排序好的子序列合并成一个最终的排序序列
+
+### 堆排序
+- 插入O(logN),取最值O(1)
+- 数组元素依次建立小顶堆
+- 依次取堆顶元素，并删除
+
+
+## 十大排序代码
+### 冒泡排序Bubble Sort/插入排序Insertion Sort/选择排序 Selection Sort
+```
+       public void BubbleSort(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; ++i)
+            {
+                bool flag = false;
+                for (int j = 0; j < arr.Length - 1 - i; ++j)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        arr[j]     = arr[j] ^ arr[j + 1];
+                        arr[j + 1] = arr[j] ^ arr[j + 1];
+                        arr[j]     = arr[j] ^ arr[j + 1];
+                        flag = true;
+                    }
+                }
+                if (!flag) break;
+            }
+        }
+    
+        public void InsertionSort(int[] arr){
+            for (int i = 1; i < arr.Length; ++i){
+                int value = arr[i];
+                int j = i - 1;
+                while (j >= 0){
+                    if (arr[j] > value) arr[j + 1] = arr[j];
+                    else break;
+                    --j;
+                }
+                arr[j + 1] = value;
+            }
+        }
+
+        public void SelectionSort(int[] arr){
+            for (int i = 0; i < arr.Length; ++i){
+                int minIndex = i;
+                for (int j = i + 1; j < arr.Length; ++j){
+                    if (arr[j] < arr[minIndex]) minIndex = j;
+                }
+                arr[i] = arr[i] ^ arr[minIndex];
+                arr[minIndex] = arr[i] ^ arr[minIndex];
+                arr[i] = arr[i] ^ arr[minIndex];
+            }
+        }
+```
+
+
+## 特殊排序
+
+### 计数排序 Counting Sort
+- 计数排序要求输入的数据必须是有确定范围的整数。将输入的数据值转化为键存储在额外开辟的数组空间中；然后依次把计数大于1的填充回愿数组。
+
+### 桶排序 Bucket Sort
+- 建设输入数据服从均匀分布，将数据分到有限数量的桶里，每个桶再分别排序。
+
+### 基数排序 Radix Sort
+- 基数排序是按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按照低优先级排序，再按照高优先级排序。
